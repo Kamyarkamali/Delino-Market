@@ -13,6 +13,7 @@ import { MdOutlineClose } from "react-icons/md";
 import order from "../../assets/images/order.webp";
 import logo from "../../assets/images/logo.png";
 import user from "../../assets/images/user.png";
+import RegisterForm from "../module/RegisterForm";
 
 function Header() {
   // open and cose hamburger menu
@@ -22,6 +23,8 @@ function Header() {
 
   const [megaMenu, setMegaMenu] = useState<boolean>(false);
 
+  const [register, setRegister] = useState<boolean>(false);
+
   // select one item in data menu
   const handeleClick = () => {
     setSelected("دسته بندی منو");
@@ -30,8 +33,20 @@ function Header() {
 
   const empityFunc = () => {};
 
+  // close hamburger menu
+  const closeHandeler = () => {
+    if (openMenu) {
+      setOpenMenu(false);
+    } else if (megaMenu) {
+      setMegaMenu(!megaMenu);
+    }
+  };
+
   return (
-    <div className={`${openMenu ? "overlay" : null} `}>
+    <div
+      onClick={closeHandeler}
+      className={`${openMenu || register ? "overlay" : null} `}
+    >
       <div className="max-w-[1400px] rounded-md shadow-md p-3 mx-auto flex items-center justify-between">
         <div>
           <img
@@ -84,12 +99,17 @@ function Header() {
         </div>
 
         <div className={`${!openMenu ? "block" : "hidden"} flex gap-6`}>
-          <img src={user} alt="order" className="w-[30px] cursor-pointer" />
+          <img
+            onClick={() => setRegister(true)}
+            src={user}
+            alt="order"
+            className="2xl:w-[30px] w-[23px] cursor-pointer"
+          />
           <div className="relative">
             <img
               src={order}
               alt="order"
-              className="lg:w-[40px] w-[30px] relative cursor-pointer"
+              className="lg:w-[40px] w-[29px] relative cursor-pointer"
             />
             <div className="absolute left-0 h-[27px] w-[25px] top-[-1rem] border-2 rounded-full p-[3px] bg-red-500">
               <p className="text-center text-sm font-bold text-white">0</p>
@@ -100,7 +120,13 @@ function Header() {
       {/* mega menu */}
       {megaMenu && (
         <div className="absolute hidden md:block right-0 left-0 2xl:right-[5rem] xl:right-[1rem]">
-          <MegaMenu />
+          <MegaMenu megaMenu={megaMenu} />
+        </div>
+      )}
+      {/* register form */}
+      {register && (
+        <div>
+          <RegisterForm />
         </div>
       )}
     </div>

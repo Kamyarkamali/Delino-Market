@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { IconType } from "react-icons";
 
 interface Ichildren {
   children: ReactNode;
@@ -15,4 +14,8 @@ interface IopenMenu {
   openMenu: boolean;
 }
 
-export type { Ichildren, Imenu, IopenMenu };
+interface ImegaMenu {
+  megaMenu: boolean;
+}
+
+export type { Ichildren, Imenu, IopenMenu, ImegaMenu };

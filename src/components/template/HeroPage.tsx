@@ -24,7 +24,7 @@ function HeroPage() {
         </p>
         <div>
           <div className="flex justify-center mt-8">
-            <button className="bg-red-600 p-2 lg:w-[140px] rounded-md text-white hover:bg-orange-600 duration-300">
+            <button className="bg-red-600 2xl:p-2 p-1 lg:w-[140px] rounded-md text-white hover:bg-orange-600 duration-300">
               سفارش سریع
             </button>
           </div>

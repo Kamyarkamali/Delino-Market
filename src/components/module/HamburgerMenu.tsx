@@ -71,7 +71,7 @@ const HamburgerMenu: FC<IopenMenu> = ({ openMenu }) => {
         <p className="font-bold">تهران,خیابان ولیعصر</p>
       </div>
       <div className="flex justify-center">
-        <img src={logoHamburger} alt="/" className="w-[130px]" />
+        <img src={logoHamburger} alt="/" className="w-full h-[160px]" />
       </div>
     </motion.div>
   );
