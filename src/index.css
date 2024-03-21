@@ -11,6 +11,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: iran;
+  background-color: aliceblue;
 }
 
 .overlay {
@@ -20,8 +21,29 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
 }
 
-/* .bg {
-  background-image: url("/public/images/cover.avif");
-} */
+.hero {
+  border-top-right-radius: 95px;
+  border-bottom-right-radius: 96px;
+  border-bottom-left-radius: 098px;
+}
+
+.hero2 {
+  .-webkit-border-bottom-right-radius: 96px;
+  -webkit-border-bottom-left-radius: 098px;
+  -moz-border-radius-bottomright: 96px;
+  -moz-border-radius-bottomleft: 098px;
+  border-bottom-right-radius: 96px;
+  border-bottom-left-radius: 098px;
+}
+
+.hero3 {
+  -webkit-border-bottom-right-radius: 96px;
+  -webkit-border-bottom-left-radius: 098px;
+  -moz-border-radius-bottomright: 96px;
+  -moz-border-radius-bottomleft: 098px;
+  border-bottom-right-radius: 96px;
+  border-bottom-left-radius: 098px;
+}

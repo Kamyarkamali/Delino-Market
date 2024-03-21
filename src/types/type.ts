@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 interface Ichildren {
   children: ReactNode;
@@ -18,4 +18,9 @@ interface ImegaMenu {
   megaMenu: boolean;
 }
 
-export type { Ichildren, Imenu, IopenMenu, ImegaMenu };
+interface IsetRegister {
+  setRegister: Dispatch<SetStateAction<boolean>>;
+  register: boolean;
+}
+
+export type { Ichildren, Imenu, IopenMenu, ImegaMenu, IsetRegister };

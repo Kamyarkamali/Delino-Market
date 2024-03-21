@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { data } from "../../data";
+import ReactCardFlip from "react-card-flip";
 
 //components
 import HamburgerMenu from "../module/HamburgerMenu";
@@ -14,6 +15,7 @@ import order from "../../assets/images/order.webp";
 import logo from "../../assets/images/logo.png";
 import user from "../../assets/images/user.png";
 import RegisterForm from "../module/RegisterForm";
+import Login from "../module/Login";
 
 function Header() {
   // open and cose hamburger menu
@@ -24,6 +26,8 @@ function Header() {
   const [megaMenu, setMegaMenu] = useState<boolean>(false);
 
   const [register, setRegister] = useState<boolean>(false);
+
+  const [show, setShow] = useState<boolean>(false);
 
   // select one item in data menu
   const handeleClick = () => {
@@ -45,7 +49,7 @@ function Header() {
   return (
     <div
       onClick={closeHandeler}
-      className={`${openMenu || register ? "overlay" : null} `}
+      className={`${openMenu || show ? "overlay" : null} `}
     >
       <div className="max-w-[1400px] rounded-md shadow-md p-3 mx-auto flex items-center justify-between">
         <div>
@@ -100,7 +104,7 @@ function Header() {
 
         <div className={`${!openMenu ? "block" : "hidden"} flex gap-6`}>
           <img
-            onClick={() => setRegister(true)}
+            onClick={() => setShow((prev) => !prev)}
             src={user}
             alt="order"
             className="2xl:w-[30px] w-[23px] cursor-pointer"
@@ -123,10 +127,17 @@ function Header() {
           <MegaMenu megaMenu={megaMenu} />
         </div>
       )}
-      {/* register form */}
-      {register && (
+      {/* register form flip back card*/}
+      {show && (
         <div>
-          <RegisterForm />
+          <ReactCardFlip flipDirection="horizontal" isFlipped={register}>
+            <div>
+              <RegisterForm setRegister={setRegister} register={register} />
+            </div>
+            <div>
+              <Login setRegister={setRegister} register={register} />
+            </div>
+          </ReactCardFlip>
         </div>
       )}
     </div>

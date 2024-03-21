@@ -1,17 +1,21 @@
 import apple from "../../assets/images/apple.jpg";
 import gooleplay from "../../assets/images/googleplay.png";
-import hero from "../../assets/homepage/istockphoto-177497648-612x612.jpg";
+import hero2 from "../../assets/homepage/pretty-young-girl-holding-pizza_1368-58210.jpg";
 
 function HeroPage() {
   return (
     <div className="max-w-[1400px] mx-auto lg:flex grid grid-cols-1 md:grid-cols-2 justify-around mt-9">
-      <div>
-        <img className="w-[700px] rounded-md" src={hero} alt="/" />
+      <div className="flex justify-center">
+        <img
+          className="2xl:w-[700px] xl:w-[600px] lg:w-[600px] w-[500px] rounded-l-[20px] rounded-[40px] shadow-lg shadow-gray-400"
+          src={hero2}
+          alt="/"
+        />
       </div>
 
       {/* <div>center</div> */}
 
-      <div className="lg:w-[600px] flex flex-col items-center mt-5">
+      <div className="lg:w-[600px] flex flex-col justify-center 2xl:border-2 border-gray-500 2xl:shadow-lg shadow-gray-400 rounded-l-[20px] rounded-r-[50px] items-center mt-5">
         <h1 className="lg:text-2xl text-xl text-blue-500 flex items-center">
           با <span className="text-orange-600 font-bold">کامیار فود</span>طعمی
           متفاوت را امتحان کنید
