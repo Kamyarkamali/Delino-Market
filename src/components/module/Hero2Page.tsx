@@ -6,7 +6,7 @@ import { IoArrowForward } from "react-icons/io5";
 function Hero2Page() {
   return (
     <>
-      <div className="max-w-[1400px] z-10 hidden her3 shadow-lg  lg:gap-9 shadow-yellow-400  hero2 md:flex justify-between items-center mx-auto mt-9 bg-[#FFDF68] p-3 h-[300px]">
+      <div className="max-w-[1400px] z-10 hidden her3 shadow-lg  md:gap-9 shadow-yellow-400  hero2 md:flex justify-between items-center mx-auto mt-9 bg-[#FFDF68] p-3 h-[300px]">
         <div>
           <div className="relative">
             <img
@@ -52,22 +52,34 @@ function Hero2Page() {
         </button>
       </div>
       {/* size mobile */}
-      <div className="grid gap-3 md:hidden justify-center">
+      <div className="gap-3 md:hidden justify-center p-2 rounded-md w-[300px] mx-auto">
         <div className="relative">
-          <img src={hero} alt="/" className="w-[300px] rounded-md" />
-          <p className="absolute top-0 right-0 text-sm text-red-600 font-bold">
+          <img
+            src={hero}
+            alt="/"
+            className="w-[300px] shadow-lg shadow-gray-400 image1 hover:scale-105 duration-300 rounded-md mt-3"
+          />
+          <p className="absolute top-8 right-0 text-sm text-red-600 font-bold">
             سوپرایزی ویژه برای مشتریان!
           </p>
         </div>
         <div className="relative">
-          <img src={hero2} alt="/" className="w-[300px] rounded-md" />
-          <p className="absolute top-0 right-0 text-sm text-red-600 font-bold">
+          <img
+            src={hero2}
+            alt="/"
+            className="w-[300px] shadow-lg shadow-gray-400 image2 hover:scale-105 duration-300 rounded-md mt-3"
+          />
+          <p className="absolute top-8 right-0 text-sm text-red-600 font-bold">
             تخفیف 40% درصدی
           </p>
         </div>
         <div className="relative">
-          <img src={hero3} alt="/" className="w-[300px] rounded-md" />
-          <p className="absolute top-0 right-0 text-sm text-red-600 font-bold">
+          <img
+            src={hero3}
+            alt="/"
+            className="w-[300px] shadow-lg shadow-gray-400 image3 hover:scale-105 duration-300 rounded-md mt-3"
+          />
+          <p className="absolute top-8 right-0 text-sm text-red-600 font-bold">
             شرکت در قرعه کشی
           </p>
         </div>

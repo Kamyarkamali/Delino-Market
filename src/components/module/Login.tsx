@@ -17,7 +17,7 @@ const Login: FC<IsetRegister> = ({ setRegister }) => {
             نام کاربری
           </label>
           <input
-            className="mt-4 p-2 rounded-md outline-none 2xl:w-[300px] lg:w-[230px] md:w-[300px] md:p-2 "
+            className="mt-4 shadow-lg shadow-yellow-600 p-2 rounded-md outline-none 2xl:w-[300px] lg:w-[230px] md:w-[300px] md:p-2 "
             type="text"
             name="name"
             placeholder="نام کاربری"
@@ -27,7 +27,7 @@ const Login: FC<IsetRegister> = ({ setRegister }) => {
             رمز عبور
           </label>
           <input
-            className="mt-4 p-2 rounded-md outline-none 2xl:w-[300px] lg:w-[230px] md:w-[300px] md:p-2 "
+            className="mt-4 p-2 shadow-lg shadow-yellow-600 rounded-md outline-none 2xl:w-[300px] lg:w-[230px] md:w-[300px] md:p-2 "
             type="password"
             name="password"
             placeholder="رمز عبور"
@@ -35,7 +35,7 @@ const Login: FC<IsetRegister> = ({ setRegister }) => {
           <div className="flex justify-center mt-9">
             <button
               type="submit"
-              className="bg-blue-600 md:mb-9 mb-4 p-1 w-[140px] rounded-md text-white"
+              className="bg-blue-600 shadow-lg shadow-yellow-600 md:mb-9 mb-4 p-1 w-[140px] rounded-md text-white"
             >
               ورود به اکانت
             </button>
@@ -44,7 +44,7 @@ const Login: FC<IsetRegister> = ({ setRegister }) => {
             <p className="text-white font-bold">اکانت دارم</p>
             <p
               onClick={() => setRegister((register) => !register)}
-              className="text-blue-600 font-bold"
+              className="text-blue-600 cursor-pointer font-bold"
             >
               ساخت اکانت
             </p>

@@ -1,4 +1,6 @@
+import Delevry from "../module/Delevry";
 import Hero2Page from "../module/Hero2Page";
+import SliderFoods from "../module/SliderFoods";
 import HeroPage from "./HeroPage";
 
 function Home() {
@@ -6,6 +8,8 @@ function Home() {
     <div>
       <HeroPage />
       <Hero2Page />
+      <SliderFoods />
+      <Delevry />
     </div>
   );
 }
