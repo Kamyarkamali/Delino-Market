@@ -10,21 +10,8 @@ import { addToCart } from "../../Redux/CreatReducer/actionReducer";
 const MenuFoods: FC<IfoodsState> = ({ showFoods }) => {
   const dispatch = useDispatch();
 
-  // savetolocalStorage
-  // const saveToLocalStorage = (item: Foodtim) => {
-  //   const storedItems = localStorage.getItem("items");
-  //   let items: Foodtim[] = [];
-  //   if (storedItems) {
-  //     items = JSON.parse(storedItems);
-  //   }
-  //   items.push(item);
-  //   localStorage.setItem("items", JSON.stringify(items));
-  //   location.reload();
-  // };
-
   const incrementHandeler = (item: Foodtim) => {
     dispatch(addToCart(item));
-    // saveToLocalStorage(item);
     toast.success(MESSEGEALERT.success);
   };
 
@@ -36,11 +23,13 @@ const MenuFoods: FC<IfoodsState> = ({ showFoods }) => {
             key={i.id}
             className="border-2 image4 p-6 rounded-lg bg-[#110831]"
           >
+            {/* <Link to={`/${i.title}`}> */}
             <img
               className="w-[300px] image4 h-[300px] rounded-md object-cover"
               src={i.image}
               alt={i.title}
             />
+            {/* </Link> */}
             <div className="flex items-center justify-between">
               <p className="text-xl text-white mt-4">{i.title}</p>
               <p

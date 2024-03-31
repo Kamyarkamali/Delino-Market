@@ -1,15 +1,17 @@
-import Delevry from "../module/Delevry";
-import Hero2Page from "../module/Hero2Page";
-import SliderFoods from "../module/SliderFoods";
-import HeroPage from "./HeroPage";
+import Discount from "../module/Discount";
+import Faivaritse from "../module/Faivaritse";
+import MobileApp from "../module/MobileApp";
+import Resturan from "../module/Resturan";
+import Sliders from "../module/Sliders";
 
 function Home() {
   return (
     <div>
-      <HeroPage />
-      <Hero2Page />
-      <SliderFoods />
-      <Delevry />
+      <Sliders />
+      <Discount />
+      <Faivaritse />
+      <MobileApp />
+      <Resturan />
     </div>
   );
 }

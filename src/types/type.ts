@@ -22,6 +22,8 @@ interface ImegaMenu {
 interface IsetRegister {
   setRegister: Dispatch<SetStateAction<boolean>>;
   register: boolean;
+  setShow: Dispatch<SetStateAction<boolean>>;
+  show: boolean;
 }
 
 interface Foodtim {
@@ -67,6 +69,58 @@ interface Istore {
   setStore: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+interface IsearchFiltered {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+  filtered: [];
+  seFiltered: React.Dispatch<React.SetStateAction<[]>>;
+}
+
+interface Ifaiverits {
+  id: number;
+  name: string;
+  image: string;
+  discount?: number;
+}
+
+interface IApp {
+  id: number;
+  imgae: string;
+}
+
+interface Idiscount {
+  id: number;
+  name: string;
+  image: string;
+  discount: number;
+  path: string;
+}
+
+interface ImenuZiyafat {
+  id: number;
+  name: string;
+  title: string;
+  image: string;
+  price: number;
+  discount: number;
+}
+
+interface Icomment {
+  id: number;
+  name: string;
+  title: string;
+  image: string;
+  date: string;
+}
+
+interface i {
+  id: number;
+  name: string;
+  title: string;
+  image: string;
+  date: string;
+}
+
 export type {
   Ichildren,
   Imenu,
@@ -79,4 +133,11 @@ export type {
   Foodtim,
   CartItem,
   Istore,
+  IsearchFiltered,
+  Ifaiverits,
+  IApp,
+  Idiscount,
+  ImenuZiyafat,
+  Icomment,
+  i,
 };

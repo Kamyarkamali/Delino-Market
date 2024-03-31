@@ -7,9 +7,11 @@ interface CartItem {
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 // get data in localstorage
-const item =
+
+const item: CartItem[] =
   localStorage.getItem("cartItems") !== null
-    ? JSON.parse(localStorage.getItem("cartItems"))
+    ? /* @ts-ignore */
+      JSON.parse(localStorage.getItem("cartItems"))
     : [];
 
 const initialState = {
@@ -47,7 +49,8 @@ const fetchareSlice = createSlice({
       }
     },
     decrementQuantity: (state, action) => {
-      const item = state.shopping.find((item) => item.id === action.payload);
+      const item = state.shopping.find((item) => item.id === action.payload)!;
+
       if (item.quantity > 1) {
         item.quantity--;
       }

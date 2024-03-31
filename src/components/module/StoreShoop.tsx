@@ -1,12 +1,12 @@
 import { FC, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { RiDeleteBinLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 
 // icons
 import { IoClose } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa6";
+import { RiDeleteBinLine } from "react-icons/ri";
 
 // types
 import { CartItem, Istore } from "../../types/type";
@@ -69,6 +69,7 @@ const StoreShoop: FC<Istore> = ({ store, setStore }) => {
       }
       return item;
     });
+    /* @ts-ignore */
     setLocal(update);
   };
 
@@ -109,11 +110,13 @@ const StoreShoop: FC<Istore> = ({ store, setStore }) => {
                 alt="/"
                 className="w-[100px] rounded-full"
               />
-              <p>{item.title}</p>
+              {/* @ts-ignore */}
+
+              <p className="text-sm mb-2 font-bold">{item.name}</p>
               <div className="flex gap-5">
                 <button
                   onClick={() => increment(item.id)}
-                  className="bg-blue-400 flex justify-center items-center w-[70px] rounded-sm"
+                  className="bg-yellow-400 flex justify-center items-center w-[80px] rounded-sm"
                 >
                   <FaPlus size={13} />
                 </button>
@@ -121,14 +124,14 @@ const StoreShoop: FC<Istore> = ({ store, setStore }) => {
                 {item.quantity > 1 ? (
                   <button
                     onClick={() => decrements(item.id)}
-                    className="bg-blue-400 w-[70px] rounded-sm font-bold"
+                    className="bg-yellow-400 w-[70px] rounded-sm font-bold"
                   >
                     -
                   </button>
                 ) : (
                   <button
                     onClick={() => removeItems(item.id)}
-                    className="bg-blue-400 flex justify-center items-center w-[70px] rounded-sm font-bold"
+                    className="bg-yellow-400 flex justify-center items-center w-[80px] rounded-sm font-bold"
                   >
                     <RiDeleteBinLine size={17} />
                   </button>

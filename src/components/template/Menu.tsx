@@ -35,6 +35,7 @@ function Menu() {
           <option value="hamburger">همبرگر</option>
         </select>
       </div>
+      {/* @ts-ignore */}
       <MenuFoods showFoods={showFoods} setShowFoods={setShowFoods} />
     </div>
   );
